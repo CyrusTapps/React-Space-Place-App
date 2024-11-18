@@ -25,3 +25,11 @@ dist-ssr
 
 # Enviromental
 .env
+.env.*
+!.env.example
+
+# Build Folders
+build
+android
+ios
+dist
