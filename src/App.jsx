@@ -1,15 +1,20 @@
-import { useState } from "react";
+import React from "react";
 import "./App.css";
+import { createStars } from "./utils/mainBackground.mjs";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import LandingPage from "./pages/Landing/LandingPage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <h1>Space Place</h1>
-        <h2>Test Placeholder</h2>
-      </div>
+      <BrowserRouter>
+        <MainLayout>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+          </Routes>
+        </MainLayout>
+      </BrowserRouter>
     </>
   );
 }
