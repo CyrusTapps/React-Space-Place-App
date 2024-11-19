@@ -35,9 +35,15 @@ img {
 }
 
 .nav-card-icon {
-  height: 5rem;
+  height: 4rem;
   width: auto;
   justify-self: flex-end;
+  fill: #caf0f8;
+}
+
+.nav-card-icon:hover {
+  fill: #ffdab3;
+  scale: 1.1;
 }
 
 @media (max-width: 360px) {

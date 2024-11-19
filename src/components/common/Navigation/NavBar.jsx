@@ -4,7 +4,7 @@ import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
-    <nav className="nav">
+    <nav className="navbar">
       <NavLink to="/">
         <HomeIcon className="home-icon" width={24} height={24} />
       </NavLink>

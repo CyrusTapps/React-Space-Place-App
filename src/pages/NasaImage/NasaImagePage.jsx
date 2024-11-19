@@ -2,7 +2,7 @@ import React from "react";
 import "./NasaImagePage.css";
 
 const NasaImagePage = () => {
-  return <div></div>;
+  return <div>Nasa Image Page</div>;
 };
 
 export default NasaImagePage;

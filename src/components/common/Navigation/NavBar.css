@@ -1,4 +1,4 @@
-.nav {
+.navbar {
   background-color: rgba(128, 128, 128, 0.2);
   display: flex;
   justify-content: space-between;
@@ -26,6 +26,15 @@ a {
 
 a:hover {
   color: #ffdab3;
+}
+
+.home-icon {
+  fill: #caf0f8;
+}
+
+.home-icon:hover {
+  fill: #ffdab3;
+  scale: 1.1;
 }
 
 @media (max-width: 600px) {

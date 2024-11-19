@@ -10,7 +10,7 @@ const NavCard = ({ image, title, description, link }) => {
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-      <Link to={link}>
+      <Link to={link} className="nav-card-link">
         <PaperAirplaneIcon className="nav-card-icon" />
       </Link>
     </div>

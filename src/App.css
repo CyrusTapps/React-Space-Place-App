@@ -20,7 +20,7 @@ body {
 
 header,
 nav,
-.main-content {
+.main-viewer {
   width: 98%; /* Slight margin on the sides */
   max-width: 1400px; /* Prevent stretching on larger screens */
 }
@@ -52,7 +52,7 @@ nav {
   flex: 1 1 auto; /* Allow expansion */
 }
 
-.main-content {
+.main-viewer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -61,7 +61,6 @@ nav {
 }
 
 .nav-card {
-  background-color: rgba(128, 128, 128, 0.5);
   flex: 1 1 auto; /* Allow expansion */
   width: 100%; /* Full width */
 }
