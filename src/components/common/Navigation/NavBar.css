@@ -1,0 +1,38 @@
+.nav {
+  background-color: rgba(128, 128, 128, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  display: flex;
+}
+
+li,
+a {
+  list-style: none;
+  display: inline-block;
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #caf0f8;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #caf0f8;
+  padding-top: 0.5rem;
+}
+
+a:hover {
+  color: #ffdab3;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+  }
+  li {
+    display: none;
+  }
+}
