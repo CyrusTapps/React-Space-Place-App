@@ -37,11 +37,59 @@ a:hover {
   scale: 1.1;
 }
 
-@media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  fill: #caf0f8;
+}
+
+.hamburger-button:hover {
+  fill: #ffdab3;
+  scale: 1.1;
+}
+
+.menu-icon {
+  fill: #caf0f8;
+}
+
+.menu-icon:hover {
+  color: #ffdab3;
+  background-color: #caf0f8;
+}
+
+@media (max-width: 795px) {
+  .navbar {
+    position: relative;
   }
-  li {
+
+  .hamburger-button {
+    display: block;
+  }
+
+  .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.95);
+    padding: 1rem;
+    border-radius: 0 0 0 8px;
+  }
+
+  .nav-links.active {
+    display: block;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  li {
+    display: block;
   }
 }

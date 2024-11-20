@@ -6,35 +6,36 @@ import Hero from "../../components/common/Hero/Hero";
 import MainViewer from "../../components/common/MainViewer/MainViewer";
 import Footer from "../../components/common/Footer/Footer";
 import NavCard from "../../components/common/Card/NavCard";
-import image1 from "/assets/images/launch.jpg";
-import image2 from "/assets/images/nebula.jpg";
-import image3 from "/assets/images/solsys.jpg";
-import image4 from "/assets/images/iss.jpg";
+import newsImage from "/assets/images/newsImage.jpg";
+import nasaImage from "/assets/images/nasaImage.jpg";
+import solSysImage from "/assets/images/solSysImage.jpg";
+import issImage from "/assets/images/issImage.jpg";
+import landingImage from "/assets/images/landingImage.jpg";
 
 const cardData = [
   {
-    image: image1,
+    image: newsImage,
     title: "Space News",
     description: "Explore the latest news in space",
     link: "/SpaceNewsPage",
     id: 1,
   },
   {
-    image: image2,
+    image: nasaImage,
     title: "NASA Imagery",
     description: "See the beautiful images captured by NASA",
     link: "/NasaImagePage",
     id: 2,
   },
   {
-    image: image3,
+    image: solSysImage,
     title: "3D Interactive Solar System",
     description: "Explore our neighborhood in space",
     link: "/SolarSystemPage",
     id: 3,
   },
   {
-    image: image4,
+    image: issImage,
     title: "International Space Station",
     description: "See the ISS current location and live video feed",
     link: "/ISSPage",
@@ -43,11 +44,21 @@ const cardData = [
 ];
 
 const LandingPage = () => {
+  const heroContent = {
+    title: "Welcome to The Space Place!",
+    subtitle: "Your out-of-this-world educational resource!",
+    backgroundImage: landingImage,
+  };
+
   return (
     <div className="landing-page">
       <Header />
       <NavBar />
-      <Hero />
+      <Hero
+        title={heroContent.title}
+        subtitle={heroContent.subtitle}
+        backgroundImage={heroContent.backgroundImage}
+      />
       <MainViewer>
         {cardData.map((card) => (
           <NavCard

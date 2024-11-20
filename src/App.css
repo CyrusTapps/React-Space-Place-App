@@ -9,7 +9,8 @@ body {
 
 .landing-page,
 .space-news-page,
-.solar-system-page {
+.solar-system-page,
+.iss-page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

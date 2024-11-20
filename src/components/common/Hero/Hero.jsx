@@ -1,10 +1,14 @@
 import "./Hero.css";
 
-const Hero = () => {
+const Hero = ({ title, subtitle, backgroundImage }) => {
+  const heroStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+  };
+
   return (
-    <div className="hero">
-      <h3>Welcome to The Space Place!</h3>
-      <p>'The Space Place' is your out-of-this-world educational resource!</p>
+    <div className="hero" style={heroStyle}>
+      <h3>{title}</h3>
+      <p>{subtitle}</p>
     </div>
   );
 };
