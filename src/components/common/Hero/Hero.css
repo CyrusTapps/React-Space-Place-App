@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
-  background-image: url("../../../assets/images/carinanebula.jpg");
   background-size: cover;
   background-position: center;
 }
