@@ -11,16 +11,16 @@ const NavBar = () => {
       <div className="nav-links">
         <ul>
           <li>
-            <NavLink to="/">Space News</NavLink>
+            <NavLink to="/SpaceNewsPage">Space News</NavLink>
           </li>
           <li>
-            <NavLink to="/">NASA Images</NavLink>
+            <NavLink to="/NasaImagePage">NASA Images</NavLink>
           </li>
           <li>
-            <NavLink to="/">Solar System</NavLink>
+            <NavLink to="/SolarSystemPage">Solar System</NavLink>
           </li>
           <li>
-            <NavLink to="/">Int'l Space Station</NavLink>
+            <NavLink to="/ISSPage">Int'l Space Station</NavLink>
           </li>
         </ul>
       </div>
