@@ -3,8 +3,8 @@ body {
   overflow-y: auto; /* Allow vertical scrolling */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   min-height: 100vh; /* Minimum height to handle viewport issues on mobile */
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .landing-page,
@@ -39,15 +39,15 @@ footer {
 
 header {
   flex: 0 1 auto; /* Ensure it can shrink and grow as needed */
-  position: sticky;
+
   top: -2rem;
-  z-index: 100;
+  z-index: 4;
 }
 
 nav {
   flex: 0 1 auto; /* Same as header */
   position: sticky;
-  top: 1.5rem;
+  top: 0.5rem;
   z-index: 100;
 }
 

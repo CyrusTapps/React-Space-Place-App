@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./App.css";
-import { createStars } from "./utils/mainBackground.mjs";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import LandingPage from "./pages/Landing/LandingPage";
@@ -8,6 +7,7 @@ import SpaceNewsPage from "./pages/SpaceNews/SpaceNewsPage";
 import NasaImagePage from "./pages/NasaImage/NasaImagePage";
 import SolarSystemPage from "./pages/SolarSystem/SolarSystemPage";
 import ISSPage from "./pages/ISS/ISSPage";
+import { createStars } from "./utils/mainBackground.mjs";
 
 function App() {
   return (

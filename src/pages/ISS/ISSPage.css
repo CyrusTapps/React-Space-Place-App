@@ -14,6 +14,7 @@
   border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 16/9;
+  -webkit-overflow-scrolling: touch;
 }
 
 .iss-info-panel {
@@ -53,6 +54,8 @@
   border: 0;
   background: transparent;
   z-index: 1;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .map-attribution {
@@ -85,5 +88,11 @@
 
   .time-display {
     grid-template-columns: 1fr;
+  }
+
+  .feed-container {
+    aspect-ratio: 1/1;
+    height: 100vw;
+    max-height: 500px;
   }
 }

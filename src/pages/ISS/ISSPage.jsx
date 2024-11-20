@@ -9,7 +9,7 @@ import issImage from "/assets/images/issImage.jpg";
 
 const ISSPage = () => {
   const videoId = "wG4YaEcNlb0";
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&controls=0&rel=0`;
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&controls=1&rel=0`;
   const mapUrl = "https://isstracker.spaceflight.esa.int/";
 
   const heroContent = {
@@ -49,7 +49,11 @@ const ISSPage = () => {
             />
             <div className="map-attribution">
               Map Source:{" "}
-              <a href="http://wsn.spaceflight.esa.int/iss/index_portal.php">
+              <a
+                href="http://wsn.spaceflight.esa.int/iss/index_portal.php"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 www.esa.int
               </a>
             </div>
