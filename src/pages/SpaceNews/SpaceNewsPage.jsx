@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { spaceflightAPI } from "../../services/api/enpoints.js";
+import { spaceflightAPI } from "../../services/api/endpoints.js";
 import "./SpaceNewsPage.css";
 import Header from "../../components/common/Header/Header";
 import NavBar from "../../components/common/Navigation/NavBar";

@@ -3,7 +3,7 @@ import "./NavCard.css";
 import { Link } from "react-router-dom";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 
-const NavCard = ({ image, title, description, link, isExternal }) => {
+const NavCard = ({ image, title, description, link, isExternal = false }) => {
   return (
     <div className="nav-card">
       <img src={image} alt="nav-card-image"></img>
@@ -21,11 +21,6 @@ const NavCard = ({ image, title, description, link, isExternal }) => {
       </Link>
     </div>
   );
-};
-
-// Set default prop
-NavCard.defaultProps = {
-  isExternal: false,
 };
 
 export default NavCard;
