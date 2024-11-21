@@ -9,9 +9,10 @@ h1 {
   color: #caf0f8;
   font-family: spaceHeader;
   font-size: calc(2.5rem + 3vw);
-  text-align: center;
   text-shadow: 2px -2px 4px #ffdab3;
   padding-top: 0.5rem;
+  margin-left: calc(1.5rem + 22vw);
+  text-align: center;
 }
 
 h1::after {
@@ -22,10 +23,10 @@ h1::after {
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
-  gap: 1rem;
   padding-top: 3rem;
+  margin-top: 2rem;
 }
 
 .moon-container {
@@ -37,7 +38,9 @@ h1::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 5;
+  z-index: 3;
+  background-color: transparent;
+  border-radius: 50%;
 }
 
 model-viewer.rotating-moon {
@@ -49,4 +52,6 @@ model-viewer.rotating-moon {
   --progress-bar-height: 0;
   --progress-mask: transparent;
   z-index: 4;
+  background-color: transparent;
+  border-radius: 50%;
 }
