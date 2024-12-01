@@ -4,16 +4,27 @@ import Header from "../../components/common/Header/Header";
 import NavBar from "../../components/common/Navigation/NavBar";
 import MainViewer from "../../components/common/MainViewer/MainViewer";
 import Hero from "../../components/common/Hero/Hero";
+import solsysImage from "/assets/images/solSysImage.jpg";
 import Footer from "../../components/common/Footer/Footer";
 
 const SolarSystemPage = () => {
   const iframeSrc = "https://www.solarsystemscope.com/iframe/";
 
+  const heroContent = {
+    title: "Our Solar System",
+    subtitle: "Explore the solar system in 3D",
+    backgroundImage: solsysImage,
+  };
+
   return (
     <div className="solar-system-page">
       <Header />
       <NavBar />
-      <Hero />
+      <Hero
+        title={heroContent.title}
+        subtitle={heroContent.subtitle}
+        backgroundImage={heroContent.backgroundImage}
+      />
       <MainViewer>
         <div className="iframe-wrapper">
           <iframe className="solsysframe" src={iframeSrc}></iframe>

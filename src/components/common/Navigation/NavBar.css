@@ -60,7 +60,7 @@ a:hover {
   background-color: #caf0f8;
 }
 
-@media (max-width: 795px) {
+@media (max-width: 815px) {
   .navbar {
     position: relative;
   }

@@ -5,6 +5,7 @@ import "./SpaceNewsPage.css";
 import Header from "../../components/common/Header/Header";
 import NavBar from "../../components/common/Navigation/NavBar";
 import Hero from "../../components/common/Hero/Hero";
+import spaceNewsImage from "/assets/images/newsImage.jpg";
 import MainViewer from "../../components/common/MainViewer/MainViewer";
 import NavCard from "../../components/common/Card/NavCard";
 import Footer from "../../components/common/Footer/Footer";
@@ -14,6 +15,11 @@ const SpaceNewsPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const heroContent = {
+    title: "Space News",
+    subtitle: "Explore current space-related news from Spaceflight News",
+    backgroundImage: spaceNewsImage,
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -57,7 +63,11 @@ const SpaceNewsPage = () => {
     <div className="space-news-page">
       <Header />
       <NavBar />
-      <Hero />
+      <Hero
+        title={heroContent.title}
+        subtitle={heroContent.subtitle}
+        backgroundImage={heroContent.backgroundImage}
+      />
       <MainViewer>
         {loading ? (
           <p>Loading...</p>

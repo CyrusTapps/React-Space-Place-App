@@ -59,7 +59,7 @@ const LandingPage = () => {
         subtitle={heroContent.subtitle}
         backgroundImage={heroContent.backgroundImage}
       />
-      <MainViewer>
+      <MainViewer className="main-viewer">
         {cardData.map((card) => (
           <NavCard
             key={card.id}

@@ -8,15 +8,542 @@
   box-sizing: border-box;
 }
 
-.landing-page {
+/* MainLayout.css */
+/* empty */
+
+/* LandingPage.css */
+/* empty */
+
+/* SpaceNewsPage.css */
+/* empty */
+
+/* SolarSystemPage.css */
+/* empty */
+
+/* MainViewer.css */
+/* empty */
+
+/* .landing-page {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
+} */
+
+/* Note to Claude: Do not remove this comment************************************************************************************ 
+************** App.css below************************************************************************************************************** */
+
+body {
+  background-color: #000020;
+  overflow-y: hidden; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  min-height: 100vh; /* Minimum height to handle viewport issues on mobile */
+  /* display: flex;
+  flex-direction: column; */
 }
 
-header {
-  background-color: rgba(128, 128, 128, 0.5);
-  height: 15%;
-  width: 98%;
+.star {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 1px;
+  height: 1px;
+  animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.landing-page,
+.space-news-page,
+.nasa-image-page,
+.solar-system-page,
+.iss-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1; /* Take up remaining space */
+  width: 100%;
+}
+
+nav,
+.main-viewer {
+  width: 98%; /* Slight margin on the sides */
+  max-width: 1400px; /* Prevent stretching on larger screens */
+}
+
+.hero,
+footer {
+  width: 98%; /* Slight margin on the sides */
+  max-width: 1400px; /* Prevent stretching on larger screens */
+  padding: 0.5rem; /* Padding inside */
+  background-color: transparent;
+}
+
+nav {
+  flex: 0 1 auto; /* Same as header */
+  position: sticky;
+  top: 0.5rem;
+  z-index: 100;
+}
+
+.hero {
+  flex: 1 1 auto; /* Allow expansion */
+}
+
+.main-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 3 1 auto; /* Main content takes up more space */
+  width: 98%; /* From shared styles */
+  max-width: 1400px; /* From shared styles */
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-card {
+  flex: 1 1 auto; /* Allow expansion */
+  width: 100%; /* Full width */
+}
+
+footer {
+  flex: 0 1 auto; /* Allow shrinking if necessary */
+  width: 95%; /* Match other sections */
+  margin-bottom: 0.5rem; /* Space at the bottom */
+}
+
+/*Small (Mobile)*/
+@media (max-width: 360px) {
+  .landing-page,
+  .hero,
+  footer {
+    padding: 0.2rem; /* Padding inside */
+  }
+}
+
+/* Small (Phones - Landscape or small tablets in portrait) */
+@media (min-width: 361px) and (max-width: 600px) {
+}
+
+/* Medium (Tablets - Portrait or small laptops) */
+@media (min-width: 601px) and (max-width: 1024px) {
+}
+
+/* Large (Laptops, smaller desktop monitors) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+}
+
+/* Extra Large (Large monitors or ultra-wide screens) */
+@media (min-width: 1441px) {
+}
+
+/* Note to Claude: Do not remove this comment************************************************************************************ 
+************** NavCard.css below************************************************************************************************************** */
+
+.nav-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 119, 182, 0.15);
+  border: 1px solid #caf0f8;
+}
+
+img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 0.1rem #caf0f8;
+}
+
+.nav-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.nav-card-content h3 {
+  font-size: 1rem;
+  color: #ff9933;
+  text-shadow: 1px 1px 0.1rem #caf0f8;
+}
+
+.nav-card-content p {
+  font-size: 0.8rem;
+  color: #caf0f8;
+  text-shadow: 1px 1px 0.1rem #000020;
+}
+
+.nav-card-icon {
+  height: 4rem;
+  width: auto;
+  justify-self: flex-end;
+  fill: #caf0f8;
+}
+
+.nav-card-icon:hover {
+  fill: #ffdab3;
+  scale: 1.1;
+}
+
+@media (max-width: 360px) {
+  img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .nav-card-content {
+    gap: 0.2rem;
+    font-size: 1rem;
+  }
+
+  .nav-card-icon {
+    height: 2.5rem;
+    width: auto;
+  }
+}
+
+/* Note to Claude: Do not remove this comment************************************************************************************ 
+************** Footer.css below************************************************************************************************************** */
+
+footer p {
+  color: #caf0f8;
+  font-size: 0.7rem;
+}
+
+/* Note to Claude: Do not remove this comment************************************************************************************ 
+************** Header.css below************************************************************************************************************** */
+
+/* Note to Claude: Do not remove this comment************************************************************************************ 
+************** Hero.css below************************************************************************************************************** */
+
+/* Note to Claude: Do not remove this comment************************************************************************************ 
+************** NavBar.css below************************************************************************************************************** */
+
+/* Note to Claude: Do not remove this comment************************************************************************************ 
+************** ISSPage.css below************************************************************************************************************** */
+.iss-feeds-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.feed-container {
+  position: relative;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  -webkit-overflow-scrolling: touch;
+}
+
+.iss-info-panel {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.time-display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.youtube-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: 1;
+}
+
+.map-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  z-index: 1;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.map-attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border-top-left-radius: 8px;
+  z-index: 2;
+}
+
+.map-attribution a {
+  color: #fff;
+  text-decoration: none;
+  z-index: 3;
+}
+
+.map-attribution a:hover {
+  text-decoration: underline;
+  z-index: 3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .iss-feeds-container {
+    grid-template-columns: 1fr;
+  }
+
+  .time-display {
+    grid-template-columns: 1fr;
+  }
+
+  .feed-container {
+    aspect-ratio: 1/1;
+    height: 100vw;
+    max-height: 500px;
+  }
+}
+
+.location-consent {
+  text-align: center;
+  padding: 1rem;
+}
+
+.consent-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #caf0f8;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.consent-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.error-message {
+  color: #ff6b6b;
+  text-align: left;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 4px;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+.location-info {
+  text-align: center;
+  color: #caf0f8;
+}
+
+.time-item {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 4px;
+  min-height: 80px;
+}
+
+.time-item h4 {
+  margin: 0 0 0.5rem 0;
+  color: #caf0f8;
+}
+
+.location-instructions {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.location-instructions ol {
+  margin: 0.5rem 0 0 1.5rem;
+  padding: 0;
+  list-style-type: decimal;
+}
+
+.location-instructions li {
+  padding: 0.5rem 0;
+  color: #caf0f8;
+}
+
+.location-instructions p {
+  margin: 0;
+  color: #ffdab3;
+  font-weight: bold;
+}
+
+/* Make the error message more noticeable on mobile */
+@media (max-width: 768px) {
+  .error-message {
+    background: rgba(255, 107, 107, 0.1);
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+  }
+
+  .location-consent {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* * Note to Claude: Do not remove this comment************************************************************************************ 
+************** NasaImagePage.css below************************************************************************************************************** */
+
+* {
+  color: white;
+}
+
+.nasa-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.image-container {
+  width: 100%;
+  height: 60vh;
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.nasa-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.image-title {
+  font-size: 1.5rem;
+  color: #caf0f8;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.control-btn {
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-icon {
+  color: #caf0f8;
+  width: 24px;
+  height: 24px;
+}
+
+.control-btn:hover .control-icon {
+  color: #ffdab3;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.loading,
+.error {
+  color: #caf0f8;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* * Note to Claude: Do not remove this comment************************************************************************************ 
+************** SolarSystemPage.css below************************************************************************************************************** */
+
+.iframe-wrapper {
+  background: #000000;
+  padding: 0;
+  line-height: 0;
+  width: 70vw;
+  /* min-width: 500px; */
+  height: 65vh;
+  /* min-height: 400px; */
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.solsysframe {
+  border: 2px solid #0f5c6e;
+  z-index: 2;
+  width: 100%;
+  min-width: 500px;
+  height: 100%;
+  min-height: 400px;
+  border-radius: 1rem;
 }
