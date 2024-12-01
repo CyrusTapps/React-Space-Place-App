@@ -2,6 +2,12 @@
   background-color: rgba(128, 128, 128, 0.2);
   display: flex;
   justify-content: space-between;
+  width: 98%; /* Slight margin on the sides */
+  max-width: 1400px; /* Prevent stretching on larger screens */
+  flex: 0 1 auto; /* Same as header */
+  position: sticky;
+  top: 0.5rem;
+  z-index: 100;
 }
 
 li {
@@ -43,21 +49,21 @@ a:hover {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  fill: #caf0f8;
+  color: #caf0f8;
 }
 
 .hamburger-button:hover {
-  fill: #ffdab3;
+  color: #ffdab3;
   scale: 1.1;
 }
 
 .menu-icon {
-  fill: #caf0f8;
+  color: #caf0f8;
 }
 
 .menu-icon:hover {
   color: #ffdab3;
-  background-color: #caf0f8;
+  scale: 1.1;
 }
 
 @media (max-width: 815px) {

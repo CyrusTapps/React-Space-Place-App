@@ -1,0 +1,14 @@
+footer {
+  width: 98%; /* Slight margin on the sides */
+  max-width: 1400px; /* Prevent stretching on larger screens */
+  padding: 0.5rem; /* Padding inside */
+  background-color: transparent;
+  flex: 0 1 auto; /* Allow shrinking if necessary */
+  width: 95%; /* Match other sections */
+  margin-bottom: 0.5rem; /* Space at the bottom */
+}
+
+footer p {
+  color: #caf0f8;
+  font-size: 0.7rem;
+}

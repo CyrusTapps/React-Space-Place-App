@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2024 Space Place</p>
+      <p>&copy; 2024 Shawn M. Tapps. All rights reserved.</p>
     </footer>
   );
 };

@@ -1,0 +1,10 @@
+.main-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1 1 auto; /* Main content takes up more space */
+  width: 98%; /* From shared styles */
+  max-width: 1400px; /* From shared styles */
+  align-items: center;
+  justify-content: center;
+}
