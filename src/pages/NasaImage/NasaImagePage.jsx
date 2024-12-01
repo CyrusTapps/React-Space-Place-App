@@ -95,6 +95,11 @@ const NasaImagePage = () => {
                   className="nasa-image"
                 />
               </div>
+              <h5 className="refresh-info">
+                Images and descriptions will refresh every 20 seconds unless
+                paused.
+              </h5>
+
               <div className="controls">
                 <button className="control-btn pause" onClick={togglePause}>
                   {isPaused ? (
