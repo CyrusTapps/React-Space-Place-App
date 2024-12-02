@@ -48,8 +48,8 @@ function RotatingMoon() {
         alt="3D Rotating Moon"
         auto-rotate
         rotation-per-second="10deg"
-        shadow-intensity="1"
-        exposure="2"
+        shadow-intensity="0"
+        exposure="1.5"
         camera-controls
         disable-zoom
         disable-pan

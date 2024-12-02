@@ -1,4 +1,7 @@
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 15%;
   width: 98%;
   max-width: 1400px;
@@ -7,6 +10,11 @@ header {
   top: -2rem;
   z-index: 4;
   position: relative;
+}
+
+.header {
+  padding-top: 3rem;
+  margin-top: 4rem;
 }
 
 @font-face {
@@ -19,10 +27,10 @@ header {
 h1 {
   color: #caf0f8;
   font-family: spaceHeader;
-  font-size: calc(2.5rem + 3vw);
+  font-size: calc(1.7rem + 5vw);
   text-shadow: 2px -2px 4px #ffdab3;
   padding-top: 0.5rem;
-  margin-left: calc(1.5rem + 22vw);
+  margin-left: 20vw;
   text-align: center;
 }
 
@@ -31,13 +39,9 @@ h1::after {
   display: inline-block;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  padding-top: 3rem;
-  margin-top: 2rem;
+h1::before {
+  content: "\00a0";
+  display: inline-block;
 }
 
 .moon-container {
@@ -68,11 +72,6 @@ model-viewer.rotating-moon {
 }
 
 @media (max-width: 360px) {
-  header h1 {
-    font-size: 3rem;
-    margin-top: 0.5rem;
-  }
-
   header {
     padding: 0.2rem;
   }

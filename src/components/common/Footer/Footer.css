@@ -9,6 +9,10 @@ footer {
 }
 
 footer p {
-  color: #caf0f8;
-  font-size: 0.7rem;
+  color: #ff9933;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  text-shadow: -2px -2px 5px rgba(0, 0, 0, 0.5),
+    2px 2px 5px rgba(243, 241, 241, 0.3);
 }

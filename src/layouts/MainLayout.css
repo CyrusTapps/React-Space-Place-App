@@ -4,11 +4,26 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+}
+
+.light-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 85% 10%,
+    rgba(255, 218, 179, 0.2) 0%,
+    rgba(0, 0, 51, 0) 60%
+  );
+  pointer-events: none;
 }
 
 /* Scrollbar styling */
 .main-layout::-webkit-scrollbar {
-  width: 12px;
+  width: 9px;
 }
 
 .main-layout::-webkit-scrollbar-track {
@@ -22,6 +37,15 @@
 }
 
 .main-layout::-webkit-scrollbar-thumb:hover {
+  background: #0077b6;
+}
+
+.main-layout::-webkit-scrollbar-thumb:active {
   background: #ffd700;
-  border: 2px solid #000000;
+}
+
+@media (max-width: 600px) {
+  .main-layout::-webkit-scrollbar-thumb:active {
+    background: #0077b6;
+  }
 }

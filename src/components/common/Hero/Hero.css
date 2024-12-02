@@ -7,27 +7,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 0.5rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 1rem;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5),
+    2px -2px 5px rgba(243, 241, 241, 0.3);
 }
 
 .hero h3 {
-  font-size: 1.8rem;
+  font-size: calc(1.2rem + 2vw);
   color: #caf0f8;
-  text-shadow: 1px 1px 1px #480ca8;
+  text-shadow: 2px 2px 4px #480ca8;
   text-align: center;
 }
 
 .hero p {
   margin-top: 0.5rem;
-  font-size: 1.25rem;
-  color: #480ca8;
+  font-size: calc(1rem + 0.8vw);
+  color: #00b4d8;
   font-weight: bold;
-  text-shadow: 1px 1px 2px #caf0f8;
+  text-shadow: 1px 1px 2px #000020;
   text-align: center;
+}
+
+.hero h3::before,
+.hero p::before {
+  content: "\00a0";
+  display: inline-block;
+}
+
+.hero h3::after,
+.hero p::after {
+  content: "\00a0";
+  display: inline-block;
+}
+
+.hero h3,
+.hero p {
+  background: rgba(202, 240, 248, 0.1);
+  border-radius: 1rem;
 }
 
 @media (max-width: 360px) {
