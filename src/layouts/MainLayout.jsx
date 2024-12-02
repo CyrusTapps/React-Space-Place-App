@@ -6,7 +6,12 @@ import SolarSystemPage from "../pages/SolarSystem/SolarSystemPage";
 import ISSPage from "../pages/ISS/ISSPage";
 import NasaImagePage from "../pages/NasaImage/NasaImagePage";
 const MainLayout = ({ children }) => {
-  return <div className="main-layout">{children}</div>;
+  return (
+    <>
+      <div className="light-effect"></div>
+      <div className="main-layout">{children}</div>;
+    </>
+  );
 };
 
 export default MainLayout;

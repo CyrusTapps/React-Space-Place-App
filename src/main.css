@@ -63,18 +63,16 @@ body {
   }
 }
 
-/* Small (Phones - Landscape or small tablets in portrait) */
-@media (min-width: 361px) and (max-width: 600px) {
-}
+@media (min-width: 1000px) {
+  .space-news-page .main-viewer,
+  .landing-page .main-viewer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 
-/* Medium (Tablets - Portrait or small laptops) */
-@media (min-width: 601px) and (max-width: 1024px) {
-}
-
-/* Large (Laptops, smaller desktop monitors) */
-@media (min-width: 1025px) and (max-width: 1440px) {
-}
-
-/* Extra Large (Large monitors or ultra-wide screens) */
-@media (min-width: 1441px) {
+  .landing-page .main-viewer .nav-card,
+  .space-news-page .main-viewer .nav-card {
+    flex: 1 1 45%;
+  }
 }

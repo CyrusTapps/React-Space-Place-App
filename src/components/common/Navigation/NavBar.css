@@ -1,5 +1,4 @@
 .navbar {
-  background-color: rgba(128, 128, 128, 0.2);
   display: flex;
   justify-content: space-between;
   width: 98%; /* Slight margin on the sides */
@@ -8,6 +7,8 @@
   position: sticky;
   top: 0.5rem;
   z-index: 100;
+  border: 1px solid #caf0f8;
+  border-radius: 1rem;
 }
 
 li {
