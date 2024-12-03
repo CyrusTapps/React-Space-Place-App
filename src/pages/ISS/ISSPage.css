@@ -1,3 +1,19 @@
+.iss-page .hero h3 {
+  color: #ff9933;
+  text-shadow: -3px 2px 3px gray;
+  -webkit-text-stroke: 1px #000020;
+}
+
+.iss-page .hero p {
+  color: #caf0f8;
+  text-shadow: -3px 2px 1px #000020;
+}
+
+.iss-page .hero h3,
+.iss-page .hero p {
+  background: none;
+}
+
 .iss-feeds-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -18,7 +34,7 @@
 }
 
 .iss-info-panel {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 32, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 1rem;
@@ -33,6 +49,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .youtube-iframe {
@@ -73,6 +90,7 @@
   color: #fff;
   text-decoration: none;
   z-index: 3;
+  font-family: "Orbitron", sans-serif;
 }
 
 .map-attribution a:hover {
@@ -130,10 +148,11 @@
 .location-info {
   text-align: center;
   color: #caf0f8;
+  font-family: "Orbitron", sans-serif;
 }
 
 .time-item {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 32, 0.2);
   padding: 1rem;
   border-radius: 4px;
   min-height: 80px;
@@ -143,6 +162,7 @@
 .time-item h4 {
   margin: 0 0 0.5rem 0;
   color: #ff9933;
+  font-family: "Orbitron", sans-serif;
 }
 
 .location-instructions {

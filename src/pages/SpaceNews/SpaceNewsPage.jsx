@@ -82,6 +82,7 @@ const SpaceNewsPage = () => {
               description={formatDescription(article.summary)}
               link={article.url}
               isExternal={true}
+              usePopover={true}
             />
           ))
         )}

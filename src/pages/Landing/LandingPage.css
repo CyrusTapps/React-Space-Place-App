@@ -1,0 +1,16 @@
+.landing-page .hero h3 {
+  color: #000020;
+  text-shadow: 3px -2px 3px #caf0f8;
+  -webkit-text-stroke: 1px #caf0f8;
+}
+
+.landing-page .hero p {
+  color: #6a040f;
+  text-shadow: 3px -2px 3px #caf0f8;
+  -webkit-text-stroke: 1px #000020;
+}
+
+.landing-page .hero h3,
+.landing-page .hero p {
+  background: none;
+}

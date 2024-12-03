@@ -1,0 +1,24 @@
+.space-news-page .hero h3 {
+  color: #caf0f8;
+  text-shadow: -3px -2px 3px #000020;
+  -webkit-text-stroke: 1px #000020;
+}
+
+.space-news-page .hero p {
+  color: #00b4d8;
+  text-shadow: 3px -2px 1px #000020;
+  -webkit-text-stroke: 1px #caf0f8;
+}
+
+.space-news-page .hero h3,
+.space-news-page .hero p {
+  background: none;
+}
+
+.space-news-page .nav-card .nav-card-content h3 {
+  font-size: 1.1rem;
+}
+
+.space-news-page .nav-card .nav-card-content p {
+  font-size: 1rem;
+}

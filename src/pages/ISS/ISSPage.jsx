@@ -9,12 +9,16 @@ import issImage from "/assets/images/issImage.jpg";
 import { issAPI } from "../../services/api/endpoints";
 
 const ISSPage = () => {
+  const getCurrentZuluTime = () => {
+    return new Date().toISOString().replace("T", " ").slice(0, 19) + " GMT";
+  };
   const [userLocation, setUserLocation] = useState(null);
   const [locationConsent, setLocationConsent] = useState(false);
   const [passTimes, setPassTimes] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [currentPass, setCurrentPass] = useState(null);
+  const [currentTime, setCurrentTime] = useState(getCurrentZuluTime());
 
   const videoId = "wG4YaEcNlb0";
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&controls=1&rel=0`;
@@ -65,6 +69,14 @@ const ISSPage = () => {
       fetchPassTimes(userLocation);
     }
   }, [userLocation, fetchPassTimes]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(getCurrentZuluTime());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const getUserLocation = () => {
     if (navigator.geolocation) {
@@ -150,7 +162,7 @@ const ISSPage = () => {
       <div className="location-info">
         {!locationConsent ? (
           <div className="location-consent">
-            <p>Share your location to see ISS pass times</p>
+            <p>Share your location to see the next ISS pass time</p>
             <button className="consent-button" onClick={getUserLocation}>
               Share Location
             </button>
@@ -162,10 +174,13 @@ const ISSPage = () => {
             )}
           </div>
         ) : userLocation ? (
-          <p>
-            Your Location: {userLocation.latitude.toFixed(4)}°,{" "}
-            {userLocation.longitude.toFixed(4)}°
-          </p>
+          <>
+            <p>
+              Your Location: {userLocation.latitude.toFixed(4)}°,{" "}
+              {userLocation.longitude.toFixed(4)}°
+            </p>
+            <p>Current Time: {currentTime}</p>
+          </>
         ) : (
           <p>Getting location...</p>
         )}
@@ -182,21 +197,21 @@ const ISSPage = () => {
         <>
           <div className="time-item">
             <h4>Next Rise</h4>
-            {passTimes?.rise}
+            {passTimes?.rise.slice(0, 19)}
             <div className="visibility-info">
               {currentPass.visible ? "✨ Visible" : "👁️ Not visible"}
             </div>
           </div>
           <div className="time-item">
             <h4>Next Peak</h4>
-            {passTimes?.peak}
+            {passTimes?.peak.slice(0, 19)}
             <div className="elevation-info">
               Elevation: {currentPass.culmination.alt}°
             </div>
           </div>
           <div className="time-item">
             <h4>Next Set</h4>
-            {passTimes?.set}
+            {passTimes?.set.slice(0, 19)}
           </div>
         </>
       ) : (

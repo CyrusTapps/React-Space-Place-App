@@ -76,3 +76,16 @@ body {
     flex: 1 1 45%;
   }
 }
+
+.bruno-ace-regular {
+  font-family: "Bruno Ace", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.orbitron-text {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
