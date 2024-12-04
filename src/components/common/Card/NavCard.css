@@ -11,6 +11,8 @@
   border: 1px solid #caf0f8;
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5),
     2px -4px 5px rgba(243, 241, 241, 0.3);
+  max-height: 220px;
+  overflow-y: hidden;
 }
 
 img {
@@ -19,33 +21,43 @@ img {
   border-radius: 0.5rem;
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5),
     2px -4px 5px rgba(243, 241, 241, 0.3);
+  align-self: center;
 }
 
 .nav-card-content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  align-items: center;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  min-height: 0;
+  max-height: 100%;
+  overflow-y: hidden;
 }
 
 .nav-card-content h3 {
+  font-family: "Bruno Ace", sans-serif;
   font-size: calc(1rem + 0.8vw);
   color: #ff9933;
   text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5),
     2px -4px 5px rgba(243, 241, 241, 0.3);
+  margin-top: 0;
 }
 
 .nav-card-content p {
+  font-family: "Orbitron", sans-serif;
   font-size: calc(0.8rem + 0.4vw);
   color: #caf0f8;
   text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5),
     2px -4px 5px rgba(243, 241, 241, 0.3);
+  overflow-y: auto;
 }
 
 .nav-card-icon {
   height: 4rem;
   width: auto;
-  justify-self: flex-end;
+  /* align-self: center;
+  justify-self: center; */
   fill: #caf0f8;
 }
 
@@ -54,15 +66,37 @@ img {
   scale: 1.1;
 }
 
-@media (max-width: 360px) {
+.popover .MuiPopover-paper {
+  background: #caf0f8;
+  max-width: 1000px;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  border: 1px solid #ff9933;
+  border-radius: 0.5rem;
+}
+
+.popover .MuiPopover-paper .MuiTypography-root {
+  color: #000020;
+  font-family: "Orbitron", sans-serif;
+  color: #000020;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 560px) {
   img {
     height: 4rem;
     width: 4rem;
   }
 
+  .nav-card {
+    overflow-y: hidden;
+  }
+
   .nav-card-content {
     gap: 0.2rem;
     font-size: 1rem;
+    overflow-y: hidden;
   }
 
   .nav-card-icon {
@@ -70,3 +104,73 @@ img {
     width: auto;
   }
 }
+
+.nav-card::-webkit-scrollbar {
+  width: 9px;
+}
+
+.nav-card::-webkit-scrollbar-track {
+  background: #000020;
+}
+
+.nav-card::-webkit-scrollbar-thumb {
+  background-color: #480ca8;
+  border-radius: 10px;
+  border: 2px solid #caf0f8;
+}
+
+.nav-card::-webkit-scrollbar-thumb:hover {
+  background: #0077b6;
+}
+
+.nav-card::-webkit-scrollbar-thumb:active {
+  background: #ffd700;
+}
+
+@media (max-width: 600px) {
+  .nav-card::-webkit-scrollbar-thumb:active {
+    background: #0077b6;
+  }
+}
+
+/*********************************************************
+ *  ███████╗██████╗  █████╗  ██████╗███████╗    ██████╗ ██╗      █████╗  ██████╗███████╗
+ *  ██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝    ██╔══██╗██║     ██╔══██╗██╔════╝██╔════╝
+ *  ███████╗██████╔╝███████║██║     █████╗      ██████╔╝██║     ███████║██║     █████╗  
+ *  ╚════██║██╔═══╝ ██╔══██║██║     ██╔══╝      ██╔═══╝ ██║     ██╔══██║██║     ██╔══╝  
+ *  ███████║██║     ██║  ██║╚██████╗███████╗    ██║     ███████╗██║  ██║╚██████╗███████╗
+ *  ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝    ╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝
+ * ┌───────────────────────────────────────────────────────────────────────────────────┐
+ * │     Created by: Shawn M. Tapps                                                    │
+ * │     Created on: 2024-03-20 @ 14:35 GMT                                            │
+ * │     Language: CSS                                                                 │
+ * └───────────────────────────────────────────────────────────────────────────────────┘
+ *    ███████╗███╗   ███╗████████╗
+ *    ██╔════╝████╗ ████║╚══██╔══╝
+ *    ███████╗██╔████╔██║   ██║   
+ *    ╚════██║██║╚██╔╝██║   ██║   
+ *    ███████║██║ ╚═╝ ██║   ██║   
+ *    ╚══════╝╚═╝     ╚═╝   ╚═╝   
+ * 
+ * MIT License
+ * 
+ * Copyright (c) 2024 Shawn M. Tapps
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *********************************************************/

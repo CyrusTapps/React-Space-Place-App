@@ -9,12 +9,16 @@ import issImage from "/assets/images/issImage.jpg";
 import { issAPI } from "../../services/api/endpoints";
 
 const ISSPage = () => {
+  const getCurrentZuluTime = () => {
+    return new Date().toISOString().replace("T", " ").slice(0, 19) + " GMT";
+  };
   const [userLocation, setUserLocation] = useState(null);
   const [locationConsent, setLocationConsent] = useState(false);
   const [passTimes, setPassTimes] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [currentPass, setCurrentPass] = useState(null);
+  const [currentTime, setCurrentTime] = useState(getCurrentZuluTime());
 
   const videoId = "wG4YaEcNlb0";
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&controls=1&rel=0`;
@@ -65,6 +69,14 @@ const ISSPage = () => {
       fetchPassTimes(userLocation);
     }
   }, [userLocation, fetchPassTimes]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(getCurrentZuluTime());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const getUserLocation = () => {
     if (navigator.geolocation) {
@@ -150,7 +162,7 @@ const ISSPage = () => {
       <div className="location-info">
         {!locationConsent ? (
           <div className="location-consent">
-            <p>Share your location to see ISS pass times</p>
+            <p>Share your location to see the next ISS pass time</p>
             <button className="consent-button" onClick={getUserLocation}>
               Share Location
             </button>
@@ -162,10 +174,13 @@ const ISSPage = () => {
             )}
           </div>
         ) : userLocation ? (
-          <p>
-            Your Location: {userLocation.latitude.toFixed(4)}°,{" "}
-            {userLocation.longitude.toFixed(4)}°
-          </p>
+          <>
+            <p>
+              Your Location: {userLocation.latitude.toFixed(4)}°,{" "}
+              {userLocation.longitude.toFixed(4)}°
+            </p>
+            <p>Current Time: {currentTime}</p>
+          </>
         ) : (
           <p>Getting location...</p>
         )}
@@ -182,21 +197,21 @@ const ISSPage = () => {
         <>
           <div className="time-item">
             <h4>Next Rise</h4>
-            {passTimes?.rise}
+            {passTimes?.rise.slice(0, 19)}
             <div className="visibility-info">
               {currentPass.visible ? "✨ Visible" : "👁️ Not visible"}
             </div>
           </div>
           <div className="time-item">
             <h4>Next Peak</h4>
-            {passTimes?.peak}
+            {passTimes?.peak.slice(0, 19)}
             <div className="elevation-info">
               Elevation: {currentPass.culmination.alt}°
             </div>
           </div>
           <div className="time-item">
             <h4>Next Set</h4>
-            {passTimes?.set}
+            {passTimes?.set.slice(0, 19)}
           </div>
         </>
       ) : (
@@ -258,3 +273,45 @@ const ISSPage = () => {
 };
 
 export default ISSPage;
+
+/*********************************************************
+ *  ███████╗██████╗  █████╗  ██████╗███████╗    ██████╗ ██╗      █████╗  ██████╗███████╗
+ *  ██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝    ██╔══██╗██║     ██╔══██╗██╔════╝██╔════╝
+ *  ███████╗██████╔╝███████║██║     █████╗      ██████╔╝██║     ███████║██║     █████╗
+ *  ╚════██║██╔═══╝ ██╔══██║██║     ██╔══╝      ██╔═══╝ ██║     ██╔══██║██║     ██╔══╝
+ *  ███████║██║     ██║  ██║╚██████╗███████╗    ██║     ███████╗██║  ██║╚██████╗███████╗
+ *  ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝    ╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝
+ * ┌───────────────────────────────────────────────────────────────────────────────────┐
+ * │     Created by: Shawn M. Tapps                                                    │
+ * │     Created on: 2024-03-20 @ 14:35 GMT                                            │
+ * │     Language: JSX                                                                 │
+ * └───────────────────────────────────────────────────────────────────────────────────┘
+ *    ███████╗███╗   ███╗████████╗
+ *    ██╔════╝████╗ ████║╚══██╔══╝
+ *    ███████╗██╔████╔██║   ██║
+ *    ╚════██║██║╚██╔╝██║   ██║
+ *    ███████║██║ ╚═╝ ██║   ██║
+ *    ╚══════╝╚═╝     ╚═╝   ╚═╝
+ *
+ * MIT License
+ *
+ * Copyright (c) 2024 Shawn M. Tapps
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *********************************************************/

@@ -33,3 +33,6 @@ build
 android
 ios
 dist
+
+# Admin Files/Folders
+admin

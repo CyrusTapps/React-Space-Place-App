@@ -7,6 +7,11 @@
   position: sticky;
   top: 0.5rem;
   z-index: 100;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 32, 0.85),
+    rgba(46, 39, 59, 0.85)
+  );
   border: 1px solid #caf0f8;
   border-radius: 1rem;
 }
@@ -22,7 +27,8 @@ a {
   padding: 0 1rem;
   text-decoration: none;
   color: #caf0f8;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-family: "Orbitron", sans-serif;
 }
 
 a {
@@ -67,9 +73,9 @@ a:hover {
   scale: 1.1;
 }
 
-@media (max-width: 815px) {
+@media (max-width: 905px) {
   .navbar {
-    position: relative;
+    position: sticky;
   }
 
   .hamburger-button {
@@ -100,3 +106,45 @@ a:hover {
     display: block;
   }
 }
+
+/*********************************************************
+ *  ███████╗██████╗  █████╗  ██████╗███████╗    ██████╗ ██╗      █████╗  ██████╗███████╗
+ *  ██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝    ██╔══██╗██║     ██╔══██╗██╔════╝██╔════╝
+ *  ███████╗██████╔╝███████║██║     █████╗      ██████╔╝██║     ███████║██║     █████╗  
+ *  ╚════██║██╔═══╝ ██╔══██║██║     ██╔══╝      ██╔═══╝ ██║     ██╔══██║██║     ██╔══╝  
+ *  ███████║██║     ██║  ██║╚██████╗███████╗    ██║     ███████╗██║  ██║╚██████╗███████╗
+ *  ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝    ╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝
+ * ┌───────────────────────────────────────────────────────────────────────────────────┐
+ * │     Created by: Shawn M. Tapps                                                    │
+ * │     Created on: 2024-03-20 @ 14:35 GMT                                            │
+ * │     Language: CSS                                                                 │
+ * └───────────────────────────────────────────────────────────────────────────────────┘
+ *    ███████╗███╗   ███╗████████╗
+ *    ██╔════╝████╗ ████║╚══██╔══╝
+ *    ███████╗██╔████╔██║   ██║   
+ *    ╚════██║██║╚██╔╝██║   ██║   
+ *    ███████║██║ ╚═╝ ██║   ██║   
+ *    ╚══════╝╚═╝     ╚═╝   ╚═╝   
+ * 
+ * MIT License
+ * 
+ * Copyright (c) 2024 Shawn M. Tapps
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *********************************************************/
