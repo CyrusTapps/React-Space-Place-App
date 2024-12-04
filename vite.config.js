@@ -13,10 +13,6 @@ export default defineConfig({
 
   // Add HTTPS configuration
   server: {
-    https: {
-      key: fs.readFileSync("./localhost-key.pem"), // Path to your private key
-      cert: fs.readFileSync("./localhost-cert.pem"), // Path to your certificate
-    },
     port: 5173, // Default port
     host: true, // Allows network access
   },

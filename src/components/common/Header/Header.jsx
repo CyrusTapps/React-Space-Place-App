@@ -4,27 +4,6 @@ import "./Header.css";
 // This version is optimized and doesn't show development mode warnings
 import "@google/model-viewer/dist/model-viewer.min.js";
 
-/*
-KEY LEARNINGS:
-1. Model Viewer Import:
-   - Use .min.js version for production-ready build
-   - Removes development warnings
-   - Maintains all functionality
-   - More performant than the development build
-
-2. What We Kept:
-   - All existing functionality
-   - Clean event handling
-   - Proper ref management
-   - Camera positioning
-   - All model-viewer attributes
-
-3. Why This Works:
-   - Minified version has development checks disabled
-   - Still includes all necessary features
-   - Better optimized for production use
-*/
-
 // Separate component for the rotating moon with proper update handling
 function RotatingMoon() {
   const modelRef = useRef(null);
@@ -66,12 +45,63 @@ function RotatingMoon() {
 }
 
 const Header = () => {
+  const isMobileDevice = () => {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  };
+
   return (
     <header className="header">
-      <h1>The Space Place</h1>
+      {isMobileDevice() ? (
+        <h1 className="mobile-header">The Space Place</h1>
+      ) : (
+        <h1 className="normal-header">The Space Place</h1>
+      )}
+
       <RotatingMoon />
     </header>
   );
 };
 
 export default Header;
+
+/*********************************************************
+ *  ███████╗██████╗  █████╗  ██████╗███████╗    ██████╗ ██╗      █████╗  ██████╗███████╗
+ *  ██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝    ██╔══██╗██║     ██╔══██╗██╔════╝██╔════╝
+ *  ███████╗██████╔╝███████║██║     █████╗      ██████╔╝██║     ███████║██║     █████╗
+ *  ╚════██║██╔═══╝ ██╔══██║██║     ██╔══╝      ██╔═══╝ ██║     ██╔══██║██║     ██╔══╝
+ *  ███████║██║     ██║  ██║╚██████╗███████╗    ██║     ███████╗██║  ██║╚██████╗███████╗
+ *  ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝    ╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝
+ * ┌───────────────────────────────────────────────────────────────────────────────────┐
+ * │     Created by: Shawn M. Tapps                                                    │
+ * │     Created on: 2024-03-20 @ 14:35 GMT                                            │
+ * │     Language: JSX                                                                 │
+ * └───────────────────────────────────────────────────────────────────────────────────┘
+ *    ███████╗███╗   ███╗████████╗
+ *    ██╔════╝████╗ ████║╚══██╔══╝
+ *    ███████╗██╔████╔██║   ██║
+ *    ╚════██║██║╚██╔╝██║   ██║
+ *    ███████║██║ ╚═╝ ██║   ██║
+ *    ╚══════╝╚═╝     ╚═╝   ╚═╝
+ *
+ * MIT License
+ *
+ * Copyright (c) 2024 Shawn M. Tapps
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *********************************************************/
