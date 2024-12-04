@@ -20,7 +20,7 @@ A modern React application that provides an interactive space exploration experi
 
 - **Framework:** React 18.3
 - **Build Tool:** Vite 5.4
-- **Routing:** React Router DOM 6.28
+- **Routing:** React Router DOM 6.28 (configured for v7 when necessary)
 - **State Management:** Zustand 5.0
 - **UI Components:**
   - Material UI 6.1
