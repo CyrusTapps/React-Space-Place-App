@@ -3,7 +3,17 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2024 Shawn M. Tapps. All rights reserved.</p>
+      <p>
+        &copy; 2024{" "}
+        <a
+          href="https://github.com/CyrusTapps"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Shawn M. Tapps
+        </a>
+        . All rights reserved.
+      </p>
     </footer>
   );
 };
