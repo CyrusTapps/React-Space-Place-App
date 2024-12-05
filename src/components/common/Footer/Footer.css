@@ -8,14 +8,20 @@ footer {
   margin-bottom: 0.5rem; /* Space at the bottom */
 }
 
-footer p {
+footer p,
+footer a {
   font-family: "Orbitron", sans-serif;
   color: #ff9933;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.05rem;
   text-shadow: -2px -2px 5px rgba(0, 0, 0, 0.5),
     2px 2px 5px rgba(243, 241, 241, 0.3);
+}
+
+footer a {
+  text-decoration: none;
+  color: #caf0f8;
 }
 
 /*********************************************************
