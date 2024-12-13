@@ -10,9 +10,9 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Shawn M. Tapps
+          Shawn M. Tapps.
         </a>
-        . All rights reserved.
+        All rights reserved.
       </p>
     </footer>
   );
@@ -29,7 +29,7 @@ export default Footer;
  *  ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝    ╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝╚══════╝
  * ┌───────────────────────────────────────────────────────────────────────────────────┐
  * │     Created by: Shawn M. Tapps                                                    │
- * │     Created on: 2024-03-20 @ 14:35 GMT                                            │
+ * │     Created on: 2024-12-13 @ 17:35 GMT                                             │
  * │     Language: JSX                                                                 │
  * └───────────────────────────────────────────────────────────────────────────────────┘
  *    ███████╗███╗   ███╗████████╗
